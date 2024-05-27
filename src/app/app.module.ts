@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { AdminHomeComponent } from './admin/home/home.component';
 import { StaffHomeComponent } from './staff/home/home.component';
 import { UserHomeComponent } from './user/home/home.component';
+import { FormsModule } from '@angular/forms'; 
+import { HttpClientModule } from '@angular/common/http'; 
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { UserHomeComponent } from './user/home/home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

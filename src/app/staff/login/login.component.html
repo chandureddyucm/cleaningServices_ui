@@ -1,1 +1,44 @@
-<p>login works!</p>
+<div class="box">
+    <div class="header">
+      <div>
+        <h1>Sparkle Cleaning Services</h1>
+      </div>
+      <div>
+        <button class="btn" (click)="home()">Home</button>
+      </div>
+    </div>
+    <div class="body">
+      <div class="login-container">
+        <form #loginForm="ngForm">
+          <h2>Login</h2>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              [(ngModel)]="email"
+              name="email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              [(ngModel)]="password"
+              name="password"
+              required
+            />
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn" (click)="onSubmit(loginForm)">
+              Login
+            </button>
+          </div>
+        </form>
+        <p>Not a staff? <a (click)="register()">Register</a></p>
+      </div>
+    </div>
+  </div>
+  
