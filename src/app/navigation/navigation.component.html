@@ -2,6 +2,8 @@
     <ul>
       <li *ngIf="userRole === 'admin'"><a routerLink="/add-service">Add Service</a></li>
       <li *ngIf="userRole === 'admin'"><a routerLink="/view-services">View Services</a></li>
+      <li *ngIf="userRole === 'admin'"><a routerLink="/toggle-staff">Toggle Staffs</a></li>
+      <li *ngIf="userRole === 'admin'"><a routerLink="/toggle-user">Toggle Users</a></li>
   
       <li *ngIf="userRole === 'staff'"><a routerLink="/staff-home">Staff Dashboard</a></li>
       <li *ngIf="userRole === 'staff'"><a routerLink="/staff-home">Staff Settings</a></li>

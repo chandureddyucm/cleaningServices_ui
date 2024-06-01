@@ -17,7 +17,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavigationComponent } from './navigation/navigation.component';
 import { AddServiceComponent } from './admin/add-service/add-service.component';
-import { ViewServicesComponent } from './admin/view-services/view-services.component'; 
+import { ViewServicesComponent } from './admin/view-services/view-services.component';
+import { ToggleStaffComponent } from './admin/toggle-staff/toggle-staff.component';
+import { ToggleUserComponent } from './admin/toggle-user/toggle-user.component'; 
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { ViewServicesComponent } from './admin/view-services/view-services.compo
     HomeComponent,
     NavigationComponent,
     AddServiceComponent,
-    ViewServicesComponent
+    ViewServicesComponent,
+    ToggleStaffComponent,
+    ToggleUserComponent
   ],
   imports: [
     BrowserModule,

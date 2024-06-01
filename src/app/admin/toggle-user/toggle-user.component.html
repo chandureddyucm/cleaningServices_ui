@@ -1,0 +1,25 @@
+<div>
+  <h2>TOGGLE USERS</h2>
+  <table>
+    <tr>
+      <th>User Name</th>
+      <th>Email</th>
+      <th>Mobile</th>
+      <th>Gender</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{ user.user_name }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{ user.mobile }}</td>
+      <td>{{ user.gender }}</td>
+      <td>{{ !user.is_deleted ? "Enabled" : "Disabled" }}</td>
+      <td>
+        <button (click)="toggleUserStatus(user.uuid, !user.is_deleted)">
+          {{ !user.is_deleted ? "Disable" : "Enable" }}
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>

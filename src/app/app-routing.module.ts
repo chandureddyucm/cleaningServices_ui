@@ -12,6 +12,8 @@ import { StaffHomeComponent } from './staff/home/home.component';
 import { AdminHomeComponent } from './admin/home/home.component';
 import { AddServiceComponent } from './admin/add-service/add-service.component';
 import { ViewServicesComponent } from './admin/view-services/view-services.component';
+import { ToggleStaffComponent } from './admin/toggle-staff/toggle-staff.component';
+import { ToggleUserComponent } from './admin/toggle-user/toggle-user.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -29,6 +31,8 @@ const routes: Routes = [
   { path: 'admin-home', component: AdminHomeComponent },
   { path: 'add-service', component: AddServiceComponent },
   { path: 'view-services', component: ViewServicesComponent },
+  { path: 'toggle-staff', component: ToggleStaffComponent },
+  { path: 'toggle-user', component: ToggleUserComponent },
 
 
   //{ path: 'user/:id', component: UserHomeComponent },

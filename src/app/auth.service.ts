@@ -28,6 +28,13 @@ export class AuthService {
     this.router.navigate(['/home']);
   }
 
+  getStaffs(): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/staff/get-staffs', {});
+  }
+
+  getUsers(): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/user/get-users', {});
+  }
 
   registerUser(user: any): Observable<any> {
     return this.http.post<any>(this.apiUrl+'/user/register-user', user);
@@ -63,6 +70,14 @@ export class AuthService {
 
   toggleServices(uuid: string, is_deleted: boolean): Observable<any> {
     return this.http.post<any>(this.apiUrl+'/admin/toggle-service', {uuid: uuid, is_deleted: is_deleted});
+  }
+
+  toggleStaff(uuid: string, is_deleted: boolean): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/admin/toggle-staff', {uuid: uuid, is_deleted: is_deleted});
+  }
+
+  toggleUser(uuid: string, is_deleted: boolean): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/admin/toggle-user', {uuid: uuid, is_deleted: is_deleted});
   }
 
   modifyService(service: any): Observable<any> {
