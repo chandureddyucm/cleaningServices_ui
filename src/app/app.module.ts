@@ -14,7 +14,8 @@ import { AdminHomeComponent } from './admin/home/home.component';
 import { StaffHomeComponent } from './staff/home/home.component';
 import { UserHomeComponent } from './user/home/home.component';
 import { FormsModule } from '@angular/forms'; 
-import { HttpClientModule } from '@angular/common/http'; 
+import { HttpClientModule } from '@angular/common/http';
+import { NavigationComponent } from './navigation/navigation.component'; 
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     UserLoginComponent,
     UserRegisterComponent,
     UserHomeComponent,
-    HomeComponent
+    HomeComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,

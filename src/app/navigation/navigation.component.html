@@ -1,0 +1,17 @@
+<nav *ngIf="isAuthenticated">
+    <ul>
+      <li *ngIf="userRole === 'admin'"><a routerLink="/admin-home">Admin Dashboard</a></li>
+      <li *ngIf="userRole === 'admin'"><a routerLink="/admin-home">Admin Settings</a></li>
+  
+      <li *ngIf="userRole === 'staff'"><a routerLink="/staff-home">Staff Dashboard</a></li>
+      <li *ngIf="userRole === 'staff'"><a routerLink="/staff-home">Staff Settings</a></li>
+  
+      <li *ngIf="userRole === 'user'"><a routerLink="/user-home">User Dashboard</a></li>
+      <li *ngIf="userRole === 'user'"><a routerLink="/user-home">User Settings</a></li>
+      
+      <li><a (click)="logout()">Logout</a></li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+  
+

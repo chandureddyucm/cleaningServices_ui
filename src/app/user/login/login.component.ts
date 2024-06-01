@@ -30,6 +30,7 @@ export class UserLoginComponent {
           alert(response.message);
           return;
         }
+        this.authService.login("user");
         this.router.navigate(['/user-home']);
       },
       (error) => {

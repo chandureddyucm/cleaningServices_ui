@@ -30,6 +30,7 @@ export class AdminLoginComponent {
           alert(response.message);
           return;
         }
+        this.authService.login("admin");
         this.router.navigate(['/admin-home']);
       },
       (error) => {
