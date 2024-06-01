@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { UserHomeComponent } from './user/home/home.component';
 import { StaffHomeComponent } from './staff/home/home.component';
 import { AdminHomeComponent } from './admin/home/home.component';
+import { AddServiceComponent } from './admin/add-service/add-service.component';
+import { ViewServicesComponent } from './admin/view-services/view-services.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -25,6 +27,9 @@ const routes: Routes = [
   { path: 'admin-login', component: AdminLoginComponent },
   { path: 'admin-register', component: AdminRegisterComponent },
   { path: 'admin-home', component: AdminHomeComponent },
+  { path: 'add-service', component: AddServiceComponent },
+  { path: 'view-services', component: ViewServicesComponent },
+
 
   //{ path: 'user/:id', component: UserHomeComponent },
   { path: '**', component: HomeComponent },

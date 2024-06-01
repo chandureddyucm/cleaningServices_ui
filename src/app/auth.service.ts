@@ -52,4 +52,20 @@ export class AuthService {
   loginAdmin(user: any): Observable<any> {
     return this.http.post<any>(this.apiUrl+'/admin/get-admin', user);
   }
+
+  addService(service: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/admin/add-service', service);
+  }
+
+  getServices(): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/admin/view-services', {});
+  }
+
+  toggleServices(uuid: string, is_deleted: boolean): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/admin/toggle-service', {uuid: uuid, is_deleted: is_deleted});
+  }
+
+  modifyService(service: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/admin/modify-service', service);
+  }
 }

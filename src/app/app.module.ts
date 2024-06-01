@@ -15,7 +15,9 @@ import { StaffHomeComponent } from './staff/home/home.component';
 import { UserHomeComponent } from './user/home/home.component';
 import { FormsModule } from '@angular/forms'; 
 import { HttpClientModule } from '@angular/common/http';
-import { NavigationComponent } from './navigation/navigation.component'; 
+import { NavigationComponent } from './navigation/navigation.component';
+import { AddServiceComponent } from './admin/add-service/add-service.component';
+import { ViewServicesComponent } from './admin/view-services/view-services.component'; 
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { NavigationComponent } from './navigation/navigation.component';
     UserRegisterComponent,
     UserHomeComponent,
     HomeComponent,
-    NavigationComponent
+    NavigationComponent,
+    AddServiceComponent,
+    ViewServicesComponent
   ],
   imports: [
     BrowserModule,

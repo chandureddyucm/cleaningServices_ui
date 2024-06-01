@@ -1,0 +1,39 @@
+<div>
+  <h2>ADD A SERVICE</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="serviceName">Service Name:</label>
+      <input
+        type="text"
+        id="serviceName"
+        [(ngModel)]="serviceName"
+        name="serviceName"
+        required
+      />
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <textarea
+        id="description"
+        [(ngModel)]="description"
+        name="description"
+        required
+      ></textarea>
+    </div>
+    <div>
+      <label for="cost">Cost:</label>
+      <input type="number" id="cost" [(ngModel)]="cost" name="cost" required />
+    </div>
+    <div>
+      <label for="estimatedTime">Estimated Time:</label>
+      <input
+        type="text"
+        id="estimatedTime"
+        [(ngModel)]="estimatedTime"
+        name="estimatedTime"
+        required
+      />
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
