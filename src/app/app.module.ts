@@ -26,6 +26,9 @@ import { CompletedServicesComponent } from './user/completed-services/completed-
 import { CancelledServicesComponent } from './user/cancelled-services/cancelled-services.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 import { MatIconModule } from '@angular/material/icon';
+import { AvailableServicesComponent } from './staff/available-services/available-services.component';
+import { AssignedServicesComponent } from './staff/assigned-services/assigned-services.component';
+import { StaffCompletedServicesComponent } from './staff/completed-services/completed-services.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { MatIconModule } from '@angular/material/icon';
     BookServiceComponent,
     BookedServicesComponent,
     CompletedServicesComponent,
-    CancelledServicesComponent
+    CancelledServicesComponent,
+    AvailableServicesComponent,
+    AssignedServicesComponent,
+    StaffCompletedServicesComponent
   ],
   imports: [
     BrowserModule,

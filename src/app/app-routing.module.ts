@@ -18,6 +18,9 @@ import { BookServiceComponent } from './user/book-service/book-service.component
 import { BookedServicesComponent } from './user/booked-services/booked-services.component';
 import { CompletedServicesComponent } from './user/completed-services/completed-services.component';
 import { CancelledServicesComponent } from './user/cancelled-services/cancelled-services.component';
+import { AvailableServicesComponent } from './staff/available-services/available-services.component';
+import { AssignedServicesComponent } from './staff/assigned-services/assigned-services.component';
+import { StaffCompletedServicesComponent } from './staff/completed-services/completed-services.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -33,6 +36,9 @@ const routes: Routes = [
   { path: 'staff-login', component: StaffLoginComponent },
   { path: 'staff-register', component: StaffRegisterComponent },
   { path: 'staff-home', component: StaffHomeComponent },
+  { path: 'staff-unassigned-services', component: AvailableServicesComponent },
+  { path: 'staff-assigned-services', component: AssignedServicesComponent },
+  { path: 'staff-completed-services', component: StaffCompletedServicesComponent },
 
   { path: 'admin-login', component: AdminLoginComponent },
   { path: 'admin-register', component: AdminRegisterComponent },

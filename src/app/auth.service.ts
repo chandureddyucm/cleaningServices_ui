@@ -109,4 +109,21 @@ export class AuthService {
   feedbackService(uuid: string, feedback: string, rating:number): Observable<any> {
     return this.http.post<any>(this.apiUrl+'/user/feedback-service', {uuid:uuid, feedback:feedback, rating:rating});
   }
+
+  //Staff
+  getAvailableServices(): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/staff/get-services', {});
+  }
+
+  getStaffServices(staff_uuid: string, status: number[]): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/staff/get-assigned-services', {staff_uuid: staff_uuid, status: status});
+  }
+
+  assignService(uuid: string, staff_uuid: string): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/staff/assign-service', {uuid: uuid, staff_uuid:staff_uuid});
+  }
+
+  completeService(uuid: string): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/staff/complete-service', {uuid: uuid});
+  }
 }

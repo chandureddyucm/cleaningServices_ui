@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class="title">Available Services</h1>
+  <table class="service-table">
+    <thead>
+      <tr>
+        <th>Service Name</th>
+        <th>Service Cost</th>
+        <th>Service Requested On</th>
+        <th>Service Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let service of services">
+        <td>{{ service.service_name }}</td>
+        <td>{{ service.service_cost }}</td>
+        <td>{{ service.service_date | date : "yyyy-MM-dd" }}</td>
+        <td>{{ service.service_address }}</td>
+        <td>
+          <button (click)="assignService(service)">Assign</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

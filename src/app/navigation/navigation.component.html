@@ -5,9 +5,10 @@
       <li *ngIf="userRole === 'admin'"><a routerLink="/toggle-staff">Toggle Staffs</a></li>
       <li *ngIf="userRole === 'admin'"><a routerLink="/toggle-user">Toggle Users</a></li>
   
-      <li *ngIf="userRole === 'staff'"><a routerLink="/staff-home">Staff Dashboard</a></li>
-      <li *ngIf="userRole === 'staff'"><a routerLink="/staff-home">Staff Settings</a></li>
-  
+      <li *ngIf="userRole === 'staff'"><a routerLink="/staff-unassigned-services">Unassigned Services</a></li>
+      <li *ngIf="userRole === 'staff'"><a routerLink="/staff-assigned-services">Assigned Services</a></li>
+      <li *ngIf="userRole === 'staff'"><a routerLink="/staff-completed-services">Completed Services</a></li>
+
       <li *ngIf="userRole === 'user'"><a routerLink="/user-book-service">Book Service</a></li>
       <li *ngIf="userRole === 'user'"><a routerLink="/user-booked-services">Scheduled Services</a></li>
       <li *ngIf="userRole === 'user'"><a routerLink="/user-completed-services">Completed Service</a></li>

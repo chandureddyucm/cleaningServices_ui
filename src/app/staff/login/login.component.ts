@@ -30,8 +30,8 @@ export class StaffLoginComponent {
           alert(response.message);
           return;
         }
-        this.authService.login("staff");
-        this.router.navigate(['/staff-home']);
+        this.authService.login("staff", response.data.uuid);
+        this.router.navigate(['/staff-unassigned-services']);
       },
       (error) => {
         console.error('Registration failed', error);
