@@ -21,7 +21,9 @@ import { ViewServicesComponent } from './admin/view-services/view-services.compo
 import { ToggleStaffComponent } from './admin/toggle-staff/toggle-staff.component';
 import { ToggleUserComponent } from './admin/toggle-user/toggle-user.component';
 import { BookServiceComponent } from './user/book-service/book-service.component';
-import { BookedServicesComponent } from './user/booked-services/booked-services.component'; 
+import { BookedServicesComponent } from './user/booked-services/booked-services.component';
+import { CompletedServicesComponent } from './user/completed-services/completed-services.component';
+import { CancelledServicesComponent } from './user/cancelled-services/cancelled-services.component'; 
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { BookedServicesComponent } from './user/booked-services/booked-services.
     ToggleStaffComponent,
     ToggleUserComponent,
     BookServiceComponent,
-    BookedServicesComponent
+    BookedServicesComponent,
+    CompletedServicesComponent,
+    CancelledServicesComponent
   ],
   imports: [
     BrowserModule,

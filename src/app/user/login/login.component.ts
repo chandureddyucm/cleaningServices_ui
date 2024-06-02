@@ -31,7 +31,7 @@ export class UserLoginComponent {
           return;
         }
         this.authService.login("user", response.data[0].uuid);
-        this.router.navigate(['/user-home']);
+        this.router.navigate(['/user-book-service']);
       },
       (error) => {
         console.error('Registration failed', error);

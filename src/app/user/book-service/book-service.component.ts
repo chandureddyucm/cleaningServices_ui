@@ -36,7 +36,6 @@ export class BookServiceComponent {
   ngOnInit() {
     this.authService.loggedUserUUID$.subscribe((loggedUserUUID) => {
       this.user_uuid = loggedUserUUID;
-      console.log(this.user_uuid);
     });
     this.getServices();
   }
@@ -82,7 +81,7 @@ export class BookServiceComponent {
       service_description: this.selectedService.description,
       service_date: this.formattedDate,
 
-      service_address: this.address || 'NA',
+      service_address: this.address || 'Self',
       service_for_other: this.bookingForOther,
       notes: this.notes,
     };

@@ -90,7 +90,7 @@ export class AuthService {
 
 
   //User
-  getUserServices(user_uuid: string, status: number): Observable<any> {
+  getUserServices(user_uuid: string, status: number[]): Observable<any> {
     return this.http.post<any>(this.apiUrl+'/user/get-services', {user_uuid: user_uuid, status: status});
   }
 

@@ -15,6 +15,9 @@ import { ViewServicesComponent } from './admin/view-services/view-services.compo
 import { ToggleStaffComponent } from './admin/toggle-staff/toggle-staff.component';
 import { ToggleUserComponent } from './admin/toggle-user/toggle-user.component';
 import { BookServiceComponent } from './user/book-service/book-service.component';
+import { BookedServicesComponent } from './user/booked-services/booked-services.component';
+import { CompletedServicesComponent } from './user/completed-services/completed-services.component';
+import { CancelledServicesComponent } from './user/cancelled-services/cancelled-services.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -23,7 +26,9 @@ const routes: Routes = [
   { path: 'user-register', component: UserRegisterComponent },
   { path: 'user-home', component: UserHomeComponent },
   { path: 'user-book-service', component: BookServiceComponent },
-  { path: 'user-booked-services', component: BookServiceComponent },
+  { path: 'user-booked-services', component: BookedServicesComponent },
+  { path: 'user-completed-services', component: CompletedServicesComponent },
+  { path: 'user-cancelled-services', component: CancelledServicesComponent },
 
   { path: 'staff-login', component: StaffLoginComponent },
   { path: 'staff-register', component: StaffRegisterComponent },

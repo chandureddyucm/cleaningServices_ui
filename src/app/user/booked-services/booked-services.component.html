@@ -1,1 +1,77 @@
-<p>booked-services works!</p>
+<div class="container">
+  <h1 class="title">Booked Services</h1>
+
+  <table class="service-table">
+    <thead>
+      <tr>
+        <th>Service Name</th>
+        <th>Service Cost</th>
+        <th>Service Requested On</th>
+        <th>Service Address</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let service of services">
+        <td>{{ service.service_name }}</td>
+        <td>{{ service.service_cost }}</td>
+        <td>{{ service.service_date | date : "yyyy-MM-dd" }}</td>
+        <td>{{ service.service_address }}</td>
+        <td>
+          <button
+            *ngIf="service.status === 0 || service.status === 1"
+            (click)="cancelService(service)"
+          >
+            Cancel
+          </button>
+          <button *ngIf="service.status === 2" (click)="payForService(service)">
+            Pay
+          </button>
+          <button
+            *ngIf="service.status === 3"
+            (click)="openFeedbackModal(service)"
+          >
+            Feedback
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Feedback Modal -->
+<div class="modal" [class.show]="feedbackModalOpen">
+  <div class="modal-content">
+    <span class="close" (click)="closeFeedbackModal()">&times;</span>
+    <h2>Feedback</h2>
+    <form (ngSubmit)="submitFeedback()">
+      <div class="form-group">
+        <label for="feedbackText">Feedback:</label>
+        <textarea
+          id="feedbackText"
+          [(ngModel)]="feedbackText"
+          name="feedbackText"
+          class="form-control"
+          rows="4"
+          required
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label for="rating">Rating:</label>
+        <div id="rating">
+          <span
+            *ngFor="let star of [1, 2, 3, 4, 5]; let i = index"
+            (click)="rating = i + 1"
+          >
+            <i
+              class="fa"
+              [class.fa-star]="i < rating"
+              [class.fa-star-o]="i >= rating"
+            ></i>
+          </span>
+        </div>
+      </div>
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+  </div>
+</div>

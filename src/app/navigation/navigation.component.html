@@ -10,6 +10,8 @@
   
       <li *ngIf="userRole === 'user'"><a routerLink="/user-book-service">Book Service</a></li>
       <li *ngIf="userRole === 'user'"><a routerLink="/user-booked-services">Scheduled Services</a></li>
+      <li *ngIf="userRole === 'user'"><a routerLink="/user-completed-services">Completed Service</a></li>
+      <li *ngIf="userRole === 'user'"><a routerLink="/user-cancelled-services">Cancelled Services</a></li>
       
       <li><a (click)="logout()">Logout</a></li>
     </ul>

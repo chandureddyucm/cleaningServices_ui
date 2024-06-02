@@ -31,7 +31,7 @@ export class AdminLoginComponent {
           return;
         }
         this.authService.login("admin");
-        this.router.navigate(['/admin-home']);
+        this.router.navigate(['/add-service']);
       },
       (error) => {
         console.error('Registration failed', error);
