@@ -15,9 +15,9 @@ export class BookedServicesComponent {
   feedbackText = '';
   rating = 0;
 
-  constructor(private authService: AuthService) {
+  stars: number[] = [1, 2, 3, 4, 5];
 
-  }
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     this.authService.loggedUserUUID$.subscribe((loggedUserUUID) => {
@@ -69,6 +69,14 @@ export class BookedServicesComponent {
 
   closeFeedbackModal() {
     this.feedbackModalOpen = false;
+  }
+
+  getStarIcon(star:number): string {
+    return this.rating >= this.stars.indexOf(star) + 1 ? 'star' : 'star_border';
+  }
+
+  setRating(star: number): void {
+    this.rating = star;
   }
 
   submitFeedback() {

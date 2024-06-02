@@ -58,17 +58,8 @@
       </div>
       <div class="form-group">
         <label for="rating">Rating:</label>
-        <div id="rating">
-          <span
-            *ngFor="let star of [1, 2, 3, 4, 5]; let i = index"
-            (click)="rating = i + 1"
-          >
-            <i
-              class="fa"
-              [class.fa-star]="i < rating"
-              [class.fa-star-o]="i >= rating"
-            ></i>
-          </span>
+        <div class="rating">
+          <mat-icon *ngFor="let star of stars" (click)="setRating(star)">{{ getStarIcon(star) }}</mat-icon>
         </div>
       </div>
       <button type="submit" class="btn-submit">Submit</button>

@@ -23,7 +23,9 @@ import { ToggleUserComponent } from './admin/toggle-user/toggle-user.component';
 import { BookServiceComponent } from './user/book-service/book-service.component';
 import { BookedServicesComponent } from './user/booked-services/booked-services.component';
 import { CompletedServicesComponent } from './user/completed-services/completed-services.component';
-import { CancelledServicesComponent } from './user/cancelled-services/cancelled-services.component'; 
+import { CancelledServicesComponent } from './user/cancelled-services/cancelled-services.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { CancelledServicesComponent } from './user/cancelled-services/cancelled-
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
