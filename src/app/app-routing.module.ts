@@ -14,6 +14,7 @@ import { AddServiceComponent } from './admin/add-service/add-service.component';
 import { ViewServicesComponent } from './admin/view-services/view-services.component';
 import { ToggleStaffComponent } from './admin/toggle-staff/toggle-staff.component';
 import { ToggleUserComponent } from './admin/toggle-user/toggle-user.component';
+import { BookServiceComponent } from './user/book-service/book-service.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -21,6 +22,8 @@ const routes: Routes = [
   { path: 'user-login', component: UserLoginComponent },
   { path: 'user-register', component: UserRegisterComponent },
   { path: 'user-home', component: UserHomeComponent },
+  { path: 'user-book-service', component: BookServiceComponent },
+  { path: 'user-booked-services', component: BookServiceComponent },
 
   { path: 'staff-login', component: StaffLoginComponent },
   { path: 'staff-register', component: StaffRegisterComponent },
@@ -34,13 +37,12 @@ const routes: Routes = [
   { path: 'toggle-staff', component: ToggleStaffComponent },
   { path: 'toggle-user', component: ToggleUserComponent },
 
-
   //{ path: 'user/:id', component: UserHomeComponent },
   { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

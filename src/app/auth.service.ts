@@ -9,17 +9,20 @@ import { Router } from '@angular/router';
 export class AuthService {
   private isAuthenticatedSubject: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   private userRoleSubject: BehaviorSubject<string> = new BehaviorSubject<string>("role");
+  private loggedUserUUIDSubject: BehaviorSubject<string> = new BehaviorSubject<string>("loggedUserUUID");
 
   public isAuthenticated$: Observable<boolean> = this.isAuthenticatedSubject.asObservable();
   public userRole$: Observable<string> = this.userRoleSubject.asObservable();
+  public loggedUserUUID$: Observable<string> = this.loggedUserUUIDSubject.asObservable();
 
   private apiUrl = 'http://localhost:3000/api'; 
 
   constructor(private http: HttpClient, private router: Router) { }
 
-  login(role: string): void {
+  login(role: string, uuid?:string): void {
     this.isAuthenticatedSubject.next(true);
     this.userRoleSubject.next(role);
+    this.loggedUserUUIDSubject.next(uuid||'uuid');
   }
 
   logout(): void {
@@ -60,6 +63,7 @@ export class AuthService {
     return this.http.post<any>(this.apiUrl+'/admin/get-admin', user);
   }
 
+  //Admin
   addService(service: any): Observable<any> {
     return this.http.post<any>(this.apiUrl+'/admin/add-service', service);
   }
@@ -82,5 +86,27 @@ export class AuthService {
 
   modifyService(service: any): Observable<any> {
     return this.http.post<any>(this.apiUrl+'/admin/modify-service', service);
+  }
+
+
+  //User
+  getUserServices(user_uuid: string, status: number): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/user/get-services', {user_uuid: user_uuid, status: status});
+  }
+
+  bookService(service: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/user/book-service', service);
+  }
+
+  payService(uuid: string): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/user/pay-service', {uuid: uuid});
+  }
+
+  cancelService(uuid: string): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/user/cancel-service', {uuid: uuid});
+  }
+
+  feedbackService(uuid: string, feedback: string, rating:number): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/user/feedback-service', {uuid:uuid, feedback:feedback, rating:rating});
   }
 }

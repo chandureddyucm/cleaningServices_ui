@@ -19,7 +19,9 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { AddServiceComponent } from './admin/add-service/add-service.component';
 import { ViewServicesComponent } from './admin/view-services/view-services.component';
 import { ToggleStaffComponent } from './admin/toggle-staff/toggle-staff.component';
-import { ToggleUserComponent } from './admin/toggle-user/toggle-user.component'; 
+import { ToggleUserComponent } from './admin/toggle-user/toggle-user.component';
+import { BookServiceComponent } from './user/book-service/book-service.component';
+import { BookedServicesComponent } from './user/booked-services/booked-services.component'; 
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { ToggleUserComponent } from './admin/toggle-user/toggle-user.component';
     AddServiceComponent,
     ViewServicesComponent,
     ToggleStaffComponent,
-    ToggleUserComponent
+    ToggleUserComponent,
+    BookServiceComponent,
+    BookedServicesComponent
   ],
   imports: [
     BrowserModule,
