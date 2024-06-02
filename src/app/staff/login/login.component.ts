@@ -30,7 +30,7 @@ export class StaffLoginComponent {
           alert(response.message);
           return;
         }
-        this.authService.login("staff", response.data.uuid);
+        this.authService.login("staff", response.data[0].uuid);
         this.router.navigate(['/staff-unassigned-services']);
       },
       (error) => {

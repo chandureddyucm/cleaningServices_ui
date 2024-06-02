@@ -3,6 +3,8 @@
   <table class="service-table">
     <thead>
       <tr>
+        <th>User Name</th>
+        <th>User Mobile</th>
         <th>Service Name</th>
         <th>Service Cost</th>
         <th>Service Requested On</th>
@@ -14,6 +16,8 @@
     </thead>
     <tbody>
       <tr *ngFor="let service of services">
+        <td>{{ service.user[0].user_name }}</td>
+        <td>{{ service.user[0].mobile }}</td>
         <td>{{ service.service_name }}</td>
         <td>{{ service.service_cost }}</td>
         <td>{{ service.service_date | date : "yyyy-MM-dd" }}</td>
