@@ -1,0 +1,26 @@
+<div class="container">
+    <h1 class="title">Staff Report</h1>
+    <table class="service-table">
+      <thead>
+        <tr>
+          <th>Staff Name</th>
+          <th>Staff Mobile</th>
+          <th>Available Services</th>
+          <th>Assigned Services</th>
+          <th>Completed Services</th>
+          <th>Money Earned</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let staff of staffs">
+          <td>{{ staff.user_name[0] }}</td>
+          <td>{{ staff.mobile[0] }}</td>
+          <td>{{ staff.numAvailableServices }}</td>
+          <td>{{ staff.numAssignedServices }}</td>
+          <td>{{ staff.numCompletedServices }}</td>
+          <td>${{ staff.moneyEarned }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

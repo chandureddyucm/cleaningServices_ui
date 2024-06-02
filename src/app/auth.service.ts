@@ -88,6 +88,14 @@ export class AuthService {
     return this.http.post<any>(this.apiUrl+'/admin/modify-service', service);
   }
 
+  getStaffStats(): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/admin/get-staff-report', {});
+  }
+
+  getUserStats(): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/admin/get-user-report', {});
+  }
+
 
   //User
   getUserServices(user_uuid: string, status: number[]): Observable<any> {

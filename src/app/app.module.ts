@@ -29,6 +29,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { AvailableServicesComponent } from './staff/available-services/available-services.component';
 import { AssignedServicesComponent } from './staff/assigned-services/assigned-services.component';
 import { StaffCompletedServicesComponent } from './staff/completed-services/completed-services.component';
+import { UserReportComponent } from './admin/user-report/user-report.component';
+import { StaffReportComponent } from './admin/staff-report/staff-report.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,9 @@ import { StaffCompletedServicesComponent } from './staff/completed-services/comp
     CancelledServicesComponent,
     AvailableServicesComponent,
     AssignedServicesComponent,
-    StaffCompletedServicesComponent
+    StaffCompletedServicesComponent,
+    UserReportComponent,
+    StaffReportComponent
   ],
   imports: [
     BrowserModule,

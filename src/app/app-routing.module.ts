@@ -21,6 +21,8 @@ import { CancelledServicesComponent } from './user/cancelled-services/cancelled-
 import { AvailableServicesComponent } from './staff/available-services/available-services.component';
 import { AssignedServicesComponent } from './staff/assigned-services/assigned-services.component';
 import { StaffCompletedServicesComponent } from './staff/completed-services/completed-services.component';
+import { StaffReportComponent } from './admin/staff-report/staff-report.component';
+import { UserReportComponent } from './admin/user-report/user-report.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -47,6 +49,8 @@ const routes: Routes = [
   { path: 'view-services', component: ViewServicesComponent },
   { path: 'toggle-staff', component: ToggleStaffComponent },
   { path: 'toggle-user', component: ToggleUserComponent },
+  { path: 'staff-report', component: StaffReportComponent },
+  { path: 'user-report', component: UserReportComponent },
 
   //{ path: 'user/:id', component: UserHomeComponent },
   { path: '**', component: HomeComponent },

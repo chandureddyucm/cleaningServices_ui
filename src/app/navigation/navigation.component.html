@@ -4,6 +4,8 @@
       <li *ngIf="userRole === 'admin'"><a routerLink="/view-services">View Services</a></li>
       <li *ngIf="userRole === 'admin'"><a routerLink="/toggle-staff">Toggle Staffs</a></li>
       <li *ngIf="userRole === 'admin'"><a routerLink="/toggle-user">Toggle Users</a></li>
+      <li *ngIf="userRole === 'admin'"><a routerLink="/staff-report">Staff Stats</a></li>
+      <li *ngIf="userRole === 'admin'"><a routerLink="/user-report">User Stats</a></li>
   
       <li *ngIf="userRole === 'staff'"><a routerLink="/staff-unassigned-services">Unassigned Services</a></li>
       <li *ngIf="userRole === 'staff'"><a routerLink="/staff-assigned-services">Assigned Services</a></li>

@@ -1,0 +1,25 @@
+<div class="container">
+  <h1 class="title">User Report</h1>
+  <table class="service-table">
+    <thead>
+      <tr>
+        <th>User Name</th>
+        <th>User Mobile</th>
+        <th>Scheduled Services</th>
+        <th>Cancelled Services</th>
+        <th>Completed Services</th>
+        <th>Money Spent</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.user_name[0] }}</td>
+        <td>{{ user.mobile[0] }}</td>
+        <td>{{ user.numScheduledServices }}</td>
+        <td>{{ user.numCancelledServices }}</td>
+        <td>{{ user.numCompletedServices }}</td>
+        <td>${{ user.moneySpent }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
