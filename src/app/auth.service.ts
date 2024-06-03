@@ -134,4 +134,29 @@ export class AuthService {
   completeService(uuid: string): Observable<any> {
     return this.http.post<any>(this.apiUrl+'/staff/complete-service', {uuid: uuid});
   }
+
+  //update
+  updateUser(user: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/user/update-user', user);
+  }
+
+  updateUserPassword(user: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/user/update-user-password', user);
+  }
+
+  updateStaff(user: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/staff/update-staff', user);
+  }
+
+  updateStaffPassword(user: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/staff/update-staff-password', user);
+  }
+
+  updateAdmin(user: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/admin/update-admin', user);
+  }
+
+  updateAdminPassword(user: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl+'/admin/update-admin-password', user);
+  }
 }

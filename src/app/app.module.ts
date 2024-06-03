@@ -31,6 +31,8 @@ import { AssignedServicesComponent } from './staff/assigned-services/assigned-se
 import { StaffCompletedServicesComponent } from './staff/completed-services/completed-services.component';
 import { UserReportComponent } from './admin/user-report/user-report.component';
 import { StaffReportComponent } from './admin/staff-report/staff-report.component';
+import { UpdateUserDetailsComponent } from './common/update-user-details/update-user-details.component';
+import { UpdateUserPasswordComponent } from './common/update-user-password/update-user-password.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +60,9 @@ import { StaffReportComponent } from './admin/staff-report/staff-report.componen
     AssignedServicesComponent,
     StaffCompletedServicesComponent,
     UserReportComponent,
-    StaffReportComponent
+    StaffReportComponent,
+    UpdateUserDetailsComponent,
+    UpdateUserPasswordComponent
   ],
   imports: [
     BrowserModule,

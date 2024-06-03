@@ -30,7 +30,7 @@ export class AdminLoginComponent {
           alert(response.message);
           return;
         }
-        this.authService.login("admin");
+        this.authService.login("admin", response.data[0].uuid);
         this.router.navigate(['/add-service']);
       },
       (error) => {

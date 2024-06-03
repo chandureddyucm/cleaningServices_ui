@@ -23,6 +23,8 @@ import { AssignedServicesComponent } from './staff/assigned-services/assigned-se
 import { StaffCompletedServicesComponent } from './staff/completed-services/completed-services.component';
 import { StaffReportComponent } from './admin/staff-report/staff-report.component';
 import { UserReportComponent } from './admin/user-report/user-report.component';
+import { UpdateUserDetailsComponent } from './common/update-user-details/update-user-details.component';
+import { UpdateUserPasswordComponent } from './common/update-user-password/update-user-password.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -51,6 +53,9 @@ const routes: Routes = [
   { path: 'toggle-user', component: ToggleUserComponent },
   { path: 'staff-report', component: StaffReportComponent },
   { path: 'user-report', component: UserReportComponent },
+
+  { path: 'update-user-details', component: UpdateUserDetailsComponent },
+  { path: 'update-user-password', component: UpdateUserPasswordComponent },
 
   //{ path: 'user/:id', component: UserHomeComponent },
   { path: '**', component: HomeComponent },
